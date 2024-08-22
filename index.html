@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Skills</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi,I'm <span>Harsh</span> Singh <br>From India</h1>
+        </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="harsh.jpg"/>
+                </div>
+            <div class="about-col-2">
+                    <h1 class="title">About Me</h1>
+                    <p>Eager to join a high-energy environment with a team that is creative and focused on results to achieve goals and keep me on the cutting edge of technology all of the while shaping my leadership and professional skills.  </p>
+                <div class="title2">
+                    <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-link" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/IX</span><BR>Designing Web and Interfaces</li>
+                        <li><span>Web development</span><BR>Designing Web</li>
+                       <li><span>App development</span><BR>Designing App</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024-current</span><BR>Web Analytics at Google</li>
+                        <li><span>2021-2024</span><BR>Designing Web at Amazon</li>
+                       <li><span>2020-21</span><BR>Designing App</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-25</span><BR>B.Tech from Vbspu</li>
+                        <li><span>2021</span><BR>Intermediate</li>
+                       <li><span>2019</span><BR>High School</li>
+                    </ul>
+                </div>
+                
+                </div>
+               
+
+            </div>
+        </div>
+       
+    </div>
+    <div class="footer">
+        <p>@copyright harsh singh & company</p>
+    </div>
+   
+   
+     
+ 
+   
+    <script>
+        var tablinks=document.getElementsByClassName("tab-link");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
